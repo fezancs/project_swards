@@ -1,0 +1,22 @@
+span{
+      font-size: .85vw;
+      color: black;
+      margin: .3vw;
+}
+.pagination{
+ padding: 0vw 1vw;
+ border-radius: 0;
+}
+ th{
+     padding: .3vw;
+ }
+input{
+    border: .1vw solid white;
+    background-color: white;
+}
+input:hover{
+    border: .1vw solid orange;    
+}
+.bg{
+    background-color: #e6e6fa;
+}

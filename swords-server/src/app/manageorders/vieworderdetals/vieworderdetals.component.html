@@ -1,0 +1,432 @@
+<div class="container-fluid ">
+    <div class="row d-flex ">
+       <div class="col-2">
+        <ul class="tabs" id="maps">
+            <li class="tab-link current" data-tab="tab-1">Information</li>
+            <li class="tab-link" data-tab="tab-2">Invoice</li>
+            
+        </ul>
+       </div>
+       <div class="col-10">
+                 
+        <div id="tab-1" class="tab-content current">
+            <div class="col-12">
+                 <!--information-->
+                 <div class="container-fluid" id="form" >
+                    
+                    <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header">
+                        <h3 *ngIf="order[0]">{{order[0].email}}</h3>
+                        <button> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Create New Attribute</button>
+                    </div>
+                    <div class="row d-flex justify-content-start">
+                       <div class="col-12">
+                         
+                        <div class="container-fluid">
+                           <div class="row d-flex">
+                            <div class="col-6" >
+                                   
+                                <table class="table ">
+                                    <colgroup>
+                                      <col class="forty" />
+                                      <col class="sixty" />
+                                    </colgroup>
+                                    <tr>
+                                        <th colspan = "2"> Order# {{order_id}} </th>
+                                     </tr>
+                                    <tr>
+                                        <td> ORDER DATE </td>
+                                        <td *ngIf="order[0]"> {{order[0].created_at}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td> ORDER Status </td>
+                                        <td *ngIf="order[0]"> {{order[0].status}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td> PurchaseFrom </td>
+                                        <td *ngIf="order[0]"> {{order[0]._website}} <br> {{order[0].created_in}} <br> {{order[0]._store}}<br> </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Placed from IP </td>
+                                        <td> 11111111111111111111111 </td>
+                                    </tr>
+                                </table>
+                
+                            </div>
+                            <div class="col-6">
+                                 
+                                <table class="table ">
+                                                     
+                                    <colgroup>
+                                      <col class="forty" />
+                                      <col class="sixty" />
+                                    </colgroup>
+                                    <tr>
+                                        <th colspan = "2">Account Information</th>
+                                     </tr>
+                                    <tr>
+                                        <td>  Customer Name  </td>
+                                        <td *ngIf="order[0]">{{order[0].firstname}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Email </td>
+                                        <td *ngIf="order[0]"> {{order[0].email}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Customer Group </td>
+                                        <td *ngIf="order[0]"> {{order[0].account_type}} </td>
+                                    </tr>
+                                </table>
+                
+                            </div>
+                           </div>
+                
+                
+                           <div class="row d-flex">
+                            <div class="col-6">
+                                   
+                                <table class="table ">
+                                                     
+                                    <colgroup>
+                                      <col class="forty" />
+                                      <col class="sixty" />
+                                    </colgroup>
+                                    <tr>
+                                        <th colspan = "2">Billing Address</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan = "2" class="left" *ngIf="order[0]">
+                                            {{order[0].firstname}} <br> {{order[0].address}} <br>{{order[0].city}} <br> {{order[0].postcode}} <br> {{order[0].country}} <br> T-{{order[0].telephone}}
+                                        </td>
+                                    </tr>
+                                    
+                                </table>
+                
+                            </div>
+                            <div class="col-6">
+                                 
+                                <table class="table ">
+                                                     
+                                    <colgroup>
+                                      <col class="forty" />
+                                      <col class="sixty" />
+                                    </colgroup>
+                                    <tr>
+                                        <th colspan = "2">Shipping Address</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan = "2" class="left" *ngIf="shippinginfo[0]">
+                                            {{shippinginfo[0]._address_firstname}} <br> {{shippinginfo[0]._address_address}} <br>{{shippinginfo[0]._address_city}} <br> {{shippinginfo[0]._address_postcode}} <br> {{shippinginfo[0]._address_country}} <br> T-{{shippinginfo[0]._address_telephone}}
+                                        </td>
+                                    </tr>
+                                    
+                                </table>
+                            </div>
+                           </div>
+                            
+                           <div class="row d-flex">
+                            <div class="col-6">
+                                   
+                                <table class="table ">
+                                    <colgroup>
+                                      <col class="twenty" />
+                                      <col class="eighty" />
+                                    </colgroup>
+                                    <tr>
+                                        <th colspan = "2"> Order# {{order_id}}</th>
+                                     </tr>
+                                    <tr>
+                                        <td> Invoice number </td>
+                                        <td *ngIf="invoice[0]"> {{invoice[0].invoice_id}}  </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Invoice Date </td>
+                                        <td *ngIf="invoice[0]"> {{invoice[0].date}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Order ID </td>
+                                        <td *ngIf="invoice[0]"> {{invoice[0].order_id}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Email </td>
+                                        <td *ngIf="invoice[0]"> {{invoice[0].email}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Status  </td>
+                                        <td *ngIf="invoice[0]"> {{invoice[0].status}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Bill  </td>
+                                        <td *ngIf="invoice[0]"> {{invoice[0].totalbill}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan = "2"> Order was placed using USD</td>
+                                     </tr>
+                                </table>
+                
+                            </div>
+                            <div class="col-6">
+                                 
+                                <table class="table ">
+                                                     
+                                    <colgroup>
+                                      <col class="forty" />
+                                      <col class="sixty" />
+                                    </colgroup>
+                                    <tr>
+                                        <th colspan = "2">Billing Address</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan = "2" class="left">
+                                           <b> DHL-EXPRESS SHIPPING </b> $25.00
+                                        </td>
+                                    </tr>
+                                    
+                                </table>
+                
+                            </div>
+                           </div>
+                 
+                           <div class="row">
+                            <div class="col-12">
+                                <table class="table ">
+                                                     
+                                    <colgroup>
+                                      <col class="thirtyseven" />
+                                      <col class="seven" />
+                                      <col class="seven" />
+                                      <col class="seven" />
+                                      <col class="seven" />
+                                      <col class="seven" />
+                                      <col class="seven" />
+                                      <col class="ten" />
+                                      <col class="ten" />
+                                    </colgroup>
+                                    <tr>
+                                        <th colspan = "10">Billing Address</th>
+                                    </tr>
+                                    <tr>
+                                        <th> Product</th>
+                                        <th>Item Status</th>
+                                        <th>Original Price</th>
+                                        <th> Price </th>
+                                        <th> Qty</th>
+                                        <th>Sub Total</th>
+                                        <th>Tax Amount</th>
+                                        <th>Tax Percent</th>
+                                        <th>Discount Amount</th>
+                                        <th>Row Total</th>
+                                    </tr>
+                                    <tr *ngFor="let row of getcustomerorderdetails">
+                                        <td>
+                                            <span> <b> {{row.product_sku}} </b></span> <br>
+                                        </td>
+                                        <td>invoice</td>
+                                        <td> {{row.price}} </td>
+                                        <td> {{row.price}} </td>
+                                        <td> 
+                                          <span>ordered {{row.qty}}</span> <br>  
+                                        </td>
+                                        <td> <b>$0.0</b></td>
+                                        <td>$0.0</td>
+                                        <td>$0.0</td>
+                                        <td> 0%</td>
+                                        <td> {{row.price}}*{{row.qty}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                           </div>
+                
+                           <div class="row d-flex">
+                            <div class="col-6" >
+                                   
+                                <table class="table ">
+                                    <colgroup>
+                                      <col class="hundred" />
+                                    </colgroup>
+                                    <tr>
+                                        <th > Common History</th>
+                                    </tr>
+                                    <tr>
+                                        <td > Add Order Comments</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="col-3" for="des">Comment</label>
+                                            <textarea class="col-9" formControlName="des" type="text" class="form-control"  id="des"></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                
+                            </div>
+                            <div class="col-6">
+                                 
+                                <table class="table " id="order-total" >
+                                                     
+                                    <colgroup>
+                                      <col class="eighty" />
+                                      <col class="twenty" />
+                                    </colgroup>
+                                    <tr>
+                                        <th colspan = "2">Order Total</th>
+                                     </tr>
+                                    <tr>
+                                        <td>  Sub Total </td>
+                                        <td> $0.00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Shipping and Handling </td>
+                                        <td> $0.00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> <b>Grand Total </b> </td>
+                                        <td class="orgtext"> $0.00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> <b>Total Paid </b> </td>
+                                        <td class="orgtext"> $0.00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> <b>Total Refunded </b> </td>
+                                        <td class="orgtext"> $0.00 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> <b> Total Due </b> </td>
+                                        <td class="orgtext"> $0.00 </td>
+                                    </tr>
+                                </table>
+                
+                            </div>
+                           </div>
+                
+                
+                
+                
+                
+                
+                        </div>
+                
+                         
+                       </div>
+                    </div>
+                 </div>
+
+                 <!---->
+            </div>
+        </div>
+        <!--tab 1 end-->
+        <!--tab 2-->
+        <div id="tab-2" class="tab-content">
+            <div class="col-12">
+                <div class="container-fluid" id="form">
+                    <div class="row d-flex justify-content-between namebar">
+                        <h2>Ertugrul Sword Replica (Default)</h2>
+                        <div class="d-flex">
+                        <button class="orgbtn" style="background-color: rgb(216, 212, 212);"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Back</button>
+                        <button class="orgbtn"> Edit</button>
+                        <button class="orgbtn"> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Send Email</button>   
+                        <button class="orgbtn"> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Credit Memo</button>
+                        <button class="orgbtn"> <i class="fa fa-check-circle-o" aria-hidden="true"></i> Hold</button>
+                        <button class="orgbtn"> <i class="fa fa-check-circle-o" aria-hidden="true"></i> Ship</button>
+                       </div>
+                    </div>
+                    <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header">
+                        <div class="d-flex justify-content-start">
+                                <div class="d-flex align-items-center pagination">
+                                    <span> Page</span>
+                                    <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 1vw;"></i>
+                                    <input style="width: 3vw;height: 1.5vw;margin: 0vw .3vw;">
+                                    <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 1vw ;"></i>
+                                    <span>of 1 pages</span>
+                                </div>
+                                  <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                                    <span> Views </span>
+                                    <input style="width: 3vw;height: 1.5vw;">
+                                    <span>Per Page</span>
+                                  </div>
+                                  <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                                    <span> Total 0 Records Found </span>
+                                  </div>
+                               
+                        </div> 
+                        <button> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Create New Attribute</button>
+                    </div>
+                    <div class="row d-flex justify-content-start">
+                       <div class="col-12">
+                        
+                        
+                        <table class="table table-bordered" id="relatedproducts">
+                            <colgroup>
+                              <col class="fifteen" />
+                              <col class="thirtyfive" />
+                              <col class="twenty" />
+                              <col class="twenty" />
+                              <col class="ten" />
+                            </colgroup>
+                            <tr>
+                                <th>Invoice#</th>
+                                <th>Bill to Name</th>
+                                <th>Invoive Date</th>
+                                <th>status</th>
+                                <th>Amount</th>
+                            </tr>
+                            <tr>
+                                <td class="bg"> <input id='invoice' class="custominput " type="text"> </td>
+                                <td class="bg"> <input id='bill' class="custominput"> </td>
+                                <td class="bg">
+                                    <div class="d-flex flex-column">
+                                        <div class=" d-flex">
+                                            <label for="usefrom" style="font-size: .8vw;padding: 0;">From:</label>
+                                            <input id="usefrom" class="custominput" type="date">
+                                        </div>
+                                        <div class=" d-flex justify-content-between">
+                                            <label for="useto" style="font-size: .8vw;padding: 0;">To:</label>
+                                            <input id="useto" class="custominput" style="margin-left: 1vw;" type="date">
+                                        </div>
+                                    </div>                      
+                                </td>
+                                <td class="bg">
+                                    <select name="status" id="status" formControlName="type" class="form-control" class="custominput">
+                                        <option value="1">pending</option>
+                                        <option value="2">pending</option>
+                                    </select> 
+                                 </td>
+                                 <td class="bg">
+                                    <div class="d-flex flex-column">
+                                        <div class=" d-flex">
+                                            <label for="usefrom" style="font-size: .8vw;padding: 0;">From:</label>
+                                            <input id="usefrom" class="custominput" type="date">
+                                        </div>
+                                        <div class=" d-flex justify-content-between">
+                                            <label for="useto" style="font-size: .8vw;padding: 0;">To:</label>
+                                            <input id="useto" class="custominput" style="margin-left: 1vw;border: 1px solid white;" type="date">
+                                        </div>
+                                    </div>                      
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td>100000000</td>
+                                <td>charlie</td>
+                                <td>16/Dec</td>
+                                <td>Paid</td>
+                                <td>$0.00</td>
+                            </tr>
+                                    
+                        </table>
+                        
+                       </div>
+                    </div>
+                 </div>
+                 <!--invoices-->
+            </div>
+        </div>
+        <!--tab 2 end-->
+        
+        
+         
+
+
+
+
+       </div>
+    </div>
+</div>

@@ -1,0 +1,212 @@
+<div class="container-fluid" id="form">
+
+    <div class="row d-flex justify-content-between namebar">
+        <h2 style="margin-left: .5vw;">Dashboard</h2>
+    </div>
+
+    <div class="row d-flex justify-content-start">
+       <div class="col-12">
+         
+        <div class="container-fluid">
+           <div class="row d-flex">
+            <div class="col-4" >
+             
+
+                <div class="col-12" style="margin-bottom: 1vw;">
+                    <div class=" col-12 d-flex justify-content-between alig-items-center justify-content-center form-header" style="margin-bottom: 0;">
+                        <h3>Life Time Sales</h3> 
+                    </div>
+                    <div class="col-12 bg d-flex align-items-center justify-content-center">
+                         <h3> <b>$1.00</b></h3>
+                    </div>
+                </div>
+
+                <div class="col-12" style="margin-bottom: 1vw;">
+                    <div class=" col-12 d-flex justify-content-between alig-items-center justify-content-center form-header" style="margin-bottom: 0;">
+                        <h3>Average Orders</h3> 
+                    </div>
+                    <div class="col-12 bg d-flex align-items-center justify-content-center">
+                         <h3> <b>$1.00</b></h3>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class=" col-12 d-flex justify-content-between alig-items-center justify-content-center form-header" style="margin-bottom: 0;">
+                        <h3>Last 5 Orders</h3> 
+                    </div>
+                    <table class="table table-bordered" id="relatedproducts">
+                       <colgroup>
+                          <col class="sixty" />
+                          <col class="twenty" />
+                          <col class="twenty" />
+                        </colgroup>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Item</th>
+                            <th>Grand Total</th>
+                        </tr>
+                        <tr *ngFor="let hero of heroes">
+                            <td class="bg">Charlie</td>
+                            <td class="bg">$0.00</td>
+                            <td class="bg">$0.00</td>
+                        </tr>           
+                    </table>
+                </div>
+
+                <div class="col-12">
+                    <div class=" col-12 d-flex justify-content-between alig-items-center justify-content-center form-header" style="margin-bottom: 0;">
+                        <h3>Last 5 Search Terms</h3> 
+                    </div>
+                    <table class="table table-bordered" id="relatedproducts">
+                       <colgroup>
+                          <col class="sixty" />
+                          <col class="twenty" />
+                          <col class="twenty" />
+                        </colgroup>
+                        <tr>
+                            <th>Search Term</th>
+                            <th>Results</th>
+                            <th>Number of Users</th>
+                        </tr>
+                        <tr  *ngFor="let hero of heroes" >
+                            <td class="bg">Charlie</td>
+                            <td class="bg">$0.00</td>
+                            <td class="bg">$0.00</td>
+                        </tr>           
+                    </table>
+                </div>
+
+                <div class="col-12">
+                    <div class=" col-12 d-flex justify-content-between alig-items-center justify-content-center form-header" style="margin-bottom: 0;">
+                        <h3>Top 5 Search Terms</h3> 
+                    </div>
+                    <table class="table table-bordered" id="relatedproducts">
+                       <colgroup>
+                          <col class="sixty" />
+                          <col class="twenty" />
+                          <col class="twenty" />
+                        </colgroup>
+                        <tr>
+                            <th>Search Term</th>
+                            <th>Results</th>
+                            <th>Number of Users</th>
+                        </tr>
+                        <tr  *ngFor="let hero of heroes">
+                            <td class="bg">Charlie</td>
+                            <td class="bg">$0.00</td>
+                            <td class="bg">$0.00</td>
+                        </tr>           
+                    </table>
+                </div>
+
+            </div>
+            <div class="col-8" style="border: .1vw solid grey;">
+                
+                
+               <app-graphs></app-graphs>
+ 
+                <div class="container-fluid d-flex flex-column" style="padding: 0;">
+                    
+                        <ul class="tabs" id="maps">
+                            <li class="tab-link current" data-tab="tab-1">Bestsellers</li>
+                            <li class="tab-link" data-tab="tab-2">Most Viewed Products</li>
+                            <li class="tab-link" data-tab="tab-3">New Customers</li>
+                            <li class="tab-link" data-tab="tab-4">Customers</li>
+                        </ul>
+                    
+                        <div id="tab-1" class="tab-content current">
+
+                            <div class="col-12">
+                                <table class="table table-bordered" id="relatedproducts">
+                                   <colgroup>
+                                      <col class="sixty" />
+                                      <col class="twenty" />
+                                      <col class="twenty" />
+                                    </colgroup>
+                                    <tr>
+                                        <th>Search Termsss</th>
+                                        <th>Results</th>
+                                        <th>Number of Users</th>
+                                    </tr>
+                                    <tr  *ngFor="let hero of heroes" >
+                                        <td class="bg">Charlie</td>
+                                        <td class="bg">$0.00</td>
+                                        <td class="bg">$0.00</td>
+                                    </tr>           
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-content">
+                            <div class="col-12">
+                                <table class="table table-bordered" id="relatedproducts">
+                                   <colgroup>
+                                      <col class="sixty" />
+                                      <col class="twenty" />
+                                      <col class="twenty" />
+                                    </colgroup>
+                                    <tr>
+                                        <th>Search Term</th>
+                                        <th>Results</th>
+                                        <th>Number of Users</th>
+                                    </tr>
+                                    <tr  *ngFor="let hero of heroes" >
+                                        <td class="bg">Charlie</td>
+                                        <td class="bg">$0.00</td>
+                                        <td class="bg">$0.00</td>
+                                    </tr>           
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-content">
+                            <div class="col-12">
+                                <table class="table table-bordered" id="relatedproducts">
+                                   <colgroup>
+                                      <col class="sixty" />
+                                      <col class="twenty" />
+                                      <col class="twenty" />
+                                    </colgroup>
+                                    <tr>
+                                        <th>Search Term</th>
+                                        <th>Results</th>
+                                        <th>Number of Users</th>
+                                    </tr>
+                                    <tr  *ngFor="let hero of heroes" >
+                                        <td class="bg">Charlie</td>
+                                        <td class="bg">$0.00</td>
+                                        <td class="bg">$0.00</td>
+                                    </tr>           
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tab-4" class="tab-content">
+                            <div class="col-12">
+                                <table class="table table-bordered" id="relatedproducts">
+                                   <colgroup>
+                                      <col class="sixty" />
+                                      <col class="twenty" />
+                                      <col class="twenty" />
+                                    </colgroup>
+                                    <tr>
+                                        <th>Search Term</th>
+                                        <th>Results</th>
+                                        <th>Number of Users</th>
+                                    </tr>
+                                    <tr  *ngFor="let hero of heroes" >
+                                        <td class="bg">Charlie</td>
+                                        <td class="bg">$0.00</td>
+                                        <td class="bg">$0.00</td>
+                                    </tr>           
+                                </table>
+                            </div>
+                        </div>                            
+                   </div>       
+               </div>
+
+           </div>
+
+        </div>
+
+         
+       </div>
+    </div>
+ </div>

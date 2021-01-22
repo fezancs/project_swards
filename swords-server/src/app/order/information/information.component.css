@@ -1,0 +1,26 @@
+th{
+    font-size: .8vw;
+    padding: .3vw;
+    color: white;
+}
+td{
+    text-align: left;
+}
+.left{
+    text-align: left;
+}
+a{
+    font-size: .8vw;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+#order-total td{
+    text-align: right;
+    background-color: rgb(245, 239, 182);
+}
+.orgtext{
+    color:orange;
+    font-weight: bold;
+}
+

@@ -1,0 +1,41 @@
+<div class="container-fluid" id="form">
+    <app-namebar></app-namebar>
+    <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header">
+        <h3>Images</h3> 
+        <button> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Create New Attribute</button>
+     </div>
+    <div class="row d-flex justify-content-start">
+       <div class="col-10">
+          
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Images</th>
+                    <th>Label</th>
+                    <th>Sort Order</th>
+                    <th>Base Image</th>
+                    <th>Small Image</th>
+                    <th>Thumbnail</th>
+                    <th>Exclude</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let slide of hotsalesdata">
+                    <td> <img src={{slide.swordimage}} alt="gallery" class="img-fluid"> </td>
+                    <td> <input  class="firstinput" > </td>
+                    <td> <input class="secondinput"> </td>
+                    <td> <input type="radio" id="" name="" value=""> </td>
+                    <td> <input type="radio" id="" name="" value=""> </td>
+                    <td> <input type="radio" id="" name="" value=""> </td>
+                    <td> <input type="checkbox" id="" name="" value=""> </td>
+                    <td> <input type="checkbox" id="" name="" value=""> </td>
+                </tr>
+                
+                        
+            </tbody>
+        </table>
+ 
+       </div>
+    </div>
+ </div>

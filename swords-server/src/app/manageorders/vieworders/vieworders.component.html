@@ -1,0 +1,150 @@
+<div class="container-fluid" id="form">
+        
+    <div class="row d-flex justify-content-between namebar">
+        <h2>Manage Ctatalog Products</h2>
+        <button class="orgbtn" routerLink="/catalogproduct/create"> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Add New Product</button>
+    </div>
+    
+    <div class="row d-flex justify-content-between namebar" style="border-bottom: none;">
+        <div class="d-flex justify-content-start">
+            <div class="d-flex align-items-center pagination">
+                <span> Page</span>
+                <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 1vw;"></i>
+                <input style="width: 3vw;height: 1.5vw;margin: 0vw .3vw;">
+                <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 1vw ;"></i>
+                <span>of 1 pages</span>
+            </div>
+            <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                <span> Views </span>
+                <input style="width: 3vw;height: 1.5vw;">
+                <span>Per Page</span>
+            </div>
+            <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                <span> Total 0 Records Found </span>
+            </div>
+        </div>
+        <div>
+            <button class="orgbtn"> Reset Filter</button>
+            <button class="orgbtn"> Search </button>
+        </div>
+    </div>
+
+    <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header" style="margin-bottom: 0;">
+        <div class="d-flex justify-content-start">
+            <div class="d-flex align-items-center pagination">
+                <span> Select All</span>
+            </div>
+            <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                <span> Unselect All </span>
+            </div>
+            <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                <span> Selected visible </span>
+            </div>             
+        </div> 
+        
+    </div>
+
+    <div class="row d-flex justify-content-start">
+        <div class="col-12">
+         
+         
+         <table class="table table-bordered" id="relatedproducts">
+             <colgroup>
+               <col class="four" />
+               <col class="nine" />
+               <col class="ten" />
+               <col class="twentyfive" />
+               <col class="twentyfive" />
+               <col class="nine" />
+               <col class="nine" />
+               <col class="seven" />
+               <col class="five" />
+             </colgroup>
+             <tr>
+                 <th></th>
+                 <th>Order#</th>
+                 <th>Purchased On</th>
+                 <th>Bill to Name</th>
+                 <th>Store</th>
+                 <th>Total Items</th>
+                 <th>Total Bill</th>
+                 <th>Status</th>
+                 <th>Action</th>
+             </tr>
+             <tr>
+                 <td class="bg"> 
+                     <select name=""   class="form-control" class="custominput">
+                       <option value="1">Any</option>
+                       <option value="2">Yes</option>
+                       <option value="2">No</option>
+                     </select> 
+                 </td>
+                 <td class="bg"> <input class="custominput"> </td>
+                 <td class="bg">
+                     <div class="d-flex flex-column">
+                         <div class=" d-flex">
+                             <label for="from2" style="font-size: .8vw;padding: 0;">From:</label>
+                             <input id="from2" class="custominput" type="date" >
+                         </div>
+                         <div class=" d-flex justify-content-between">
+                             <label for="to2" style="font-size: .8vw;padding: 0;">To:</label>
+                             <input id="to2" class="custominput" type="date" style="margin-left: 1vw;">
+                         </div>
+                     </div>                      
+                 </td>
+                 <td class="bg"> <input class="custominput"> </td>
+                 <td class="bg"> <input class="custominput"> </td>
+                 <td class="bg">
+                    <div class="d-flex flex-column">
+                        <div class=" d-flex">
+                            <label for="from" style="font-size: .8vw;padding: 0;">From:</label>
+                            <input id="from" class="custominput" type="date" >
+                        </div>
+                        <div class=" d-flex justify-content-between">
+                            <label for="to" style="font-size: .8vw;padding: 0;">To:</label>
+                            <input id="to" class="custominput" type="date" style="margin-left: 1vw;">
+                        </div>
+                    </div>                      
+                </td>
+                <td class="bg">
+                    <div class="d-flex flex-column">
+                        <div class=" d-flex">
+                            <label for="from1" style="font-size: .8vw;padding: 0;">From:</label>
+                            <input id="from1" class="custominput" type="date" >
+                        </div>
+                        <div class=" d-flex justify-content-between">
+                            <label for="to1" style="font-size: .8vw;padding: 0;">To:</label>
+                            <input id="to1" class="custominput" type="date" style="margin-left: 1vw;">
+                        </div>
+                    </div>                      
+                </td>
+                 <td class="bg"> 
+                    <select name=""   class="form-control" class="custominput">
+                      <option value="1"></option>
+                      <option value="2">Default</option>
+                    </select> 
+                </td>
+                <td></td>
+             </tr>
+             
+             <ng-container *ngFor="let row of rows">
+                <tr>
+                   <td> <input id='' class="custominput" type="checkbox" style="margin-left: 0;" ></td>
+                   <td>{{row.order_id}}</td>
+                   <td>{{row.created_at}}</td>
+                   <td>{{row.email}}</td>
+                   <td>{{row.created_in}}</td>
+                   <td>{{row.total_items}}</td>
+                   <td>{{row.total_bill}}</td>
+                   <td>{{row.status}}</td>
+                   <td> <a [routerLink]="['/manageorders/vieworderdetails', row.order_id]" class="action">View</a></td>
+             </tr>
+            </ng-container>
+ 
+         </table>
+         
+        </div>
+     </div>
+
+
+ </div>

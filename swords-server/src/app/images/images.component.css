@@ -1,0 +1,24 @@
+th{
+    font-size: 1vw;
+    padding: .5vw;
+    white-space: nowrap;
+}
+td{
+    padding: 0;
+    text-align: center;
+}
+img{
+    width: 5vw;
+    height: 5vw;
+}
+.firstinput{
+    width: 20vw;
+    height: 1.6vw;
+}
+.secondinput{
+    width: 4.5vw;
+    height: 1.6vw;
+}
+input[type=radio]{
+    width: 1vw;
+  }

@@ -1,0 +1,83 @@
+ul.tabs{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-top: .3vw;
+}
+ul.tabs li{
+    background: lavender;
+    color: #222;
+    display: inline-block;
+    cursor: pointer;
+    background-color:#dad8d8;
+    padding: .3vw;
+    margin-bottom: .1vw;
+    width: 100%;
+}
+
+ul.tabs li.current{
+    background: white;
+    color: #222;
+}
+
+.tab-content{
+    display: none;
+    background: white;
+    padding: 1.5vw;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+
+
+th{
+    font-size: .8vw;
+    padding: .3vw;
+    color: white;
+}
+td{
+    text-align: left;
+}
+.left{
+    text-align: left;
+}
+a{
+    font-size: .8vw;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+#order-total td{
+    text-align: right;
+    background-color: rgb(245, 239, 182);
+}
+.orgtext{
+    color:orange;
+    font-weight: bold;
+}
+
+
+span{
+    font-size: .85vw;
+    color: black;
+    margin: .3vw;
+}
+.pagination{
+padding: 0vw 1vw;
+border-radius: 0;
+}
+th{
+   padding: .3vw;
+}
+input{
+  border: .1vw solid white;
+  background-color: white;
+}
+input:hover{
+  border: .1vw solid orange;    
+}
+.bg{
+  background-color: #e6e6fa;
+}

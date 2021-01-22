@@ -1,0 +1,20 @@
+td{
+    padding: .3vw;
+    word-wrap: break-word
+  }
+  th{
+     padding: .5vw;
+  }
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  span{
+      font-size: .85vw;
+      color: black;
+      margin: .3vw;
+  }
+  .pagination{
+    padding: 0vw 1vw;
+    border-radius: 0;
+  }

@@ -1,0 +1,46 @@
+<div class="container-fluid" id="form">
+    <app-namebar></app-namebar>
+    <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header">
+        <h3>Product Tags</h3> 
+        <button> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Create New Attribute</button>
+    </div>
+    <div class="row d-flex justify-content-start">
+       <div class="col-10">
+          
+        <table class="table table-bordered" id="relatedproducts">
+            <thead>
+                <tr>
+                    <th>Tag Name</th>
+                    <th># of Use</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <input id='tagname'> </td>
+                    <td>
+                        <div class="d-flex flex-column">
+                            <div class=" d-flex">
+                                <label for="usefrom" style="font-size: .8vw;padding: 0;">From:</label>
+                                <input id="usefrom">
+                            </div>
+                            <div class=" d-flex justify-content-between">
+                                <label for="useto" style="font-size: .8vw;padding: 0;">To:</label>
+                                <input id="useto">
+                            </div>
+                        </div>                      
+                    </td>
+                    <td>
+                        <select name="status" id="status" formControlName="type" class="form-control">
+                            <option value="1">Wide Grid</option>
+                            <option value="2">Wide Grid</option>
+                        </select> 
+                     </td> 
+                </tr>
+                        
+            </tbody>
+        </table>
+ 
+       </div>
+    </div>
+ </div>

@@ -1,0 +1,36 @@
+/*tabs*/
+
+ul.tabs{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-top: .3vw;
+}
+ul.tabs li{
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: .5vw 1vw;
+    cursor: pointer;
+    margin-left: .4vw;
+    background-color:#ededed;
+    border-top-left-radius:3px;  
+    border-top-right-radius:3px;
+}
+
+ul.tabs li.current1{
+    background: white;
+    color: #222;
+}
+
+.tab-content1{
+    display: none;
+    background: white;
+    padding: 1.5vw;
+}
+
+.tab-content1.current1{
+    display: inherit;
+}
+
+/*tabs*/

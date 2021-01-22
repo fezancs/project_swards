@@ -1,0 +1,87 @@
+
+<div class="container-fluid d-flex flex-column" style="padding: 0;margin-bottom: 5vw;">
+                    
+    <ul class="tabs" id="graphs">
+        <li class="tab-link1 current1" data-tab="tab-8">Bestsellers</li>
+        <li class="tab-link1" data-tab="tab-7">Most Viewed Products</li>
+    </ul>
+
+    <div id="tab-8" class="tab-content1 current1">
+
+        <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+            
+            <div class="col-8">
+                <div class="chart-wrapper">
+                    <canvas baseChart 
+                        [datasets]="lineChartData" 
+                        [labels]="lineChartLabels" 
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors" 
+                        [legend]="lineChartLegend" 
+                        [chartType]="lineChartType" 
+                        [plugins]="lineChartPlugins">
+                    </canvas>
+                </div>
+            </div>
+              
+            <div class="col-12 d-flex justify-content-around" style="background-color: #f2f2f2;padding:1vw">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 style="color: black;"> <b>Revenue</b></h2>
+                    <h2>$99</h2>
+                  </div>  
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 style="color: black;"> <b>Tax</b></h2>
+                    <h2>$99</h2>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 style="color: black;"> <b>Shipping</b></h2>
+                    <h2>$99</h2>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 style="color: black;"> <b> Quantity</b></h2>
+                    <h2>$99</h2>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="tab-7" class="tab-content1">
+        <div class="col-12  d-flex flex-column align-items-center justify-content-center">
+            
+            <div class="col-8">
+                <div class="chart-wrapper">
+                    <canvas baseChart 
+                        [datasets]="lineChartData1" 
+                        [labels]="lineChartLabels" 
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors" 
+                        [legend]="lineChartLegend" 
+                        [chartType]="lineChartType" 
+                        [plugins]="lineChartPlugins">
+                    </canvas>
+                </div>
+            </div>
+              
+            <div class="col-12 d-flex justify-content-around" style="background-color: #f2f2f2;padding:1vw">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 style="color: black;"> <b>Revenue</b></h2>
+                    <h2>$99</h2>
+                  </div>  
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 style="color: black;"> <b>Tax</b></h2>
+                    <h2>$99</h2>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 style="color: black;"> <b>Shipping</b></h2>
+                    <h2>$99</h2>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 style="color: black;"> <b> Quantity</b></h2>
+                    <h2>$99</h2>
+                  </div>
+            </div>
+
+
+        </div>
+    </div>                         
+</div>       

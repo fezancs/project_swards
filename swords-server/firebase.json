@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/swords-server",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

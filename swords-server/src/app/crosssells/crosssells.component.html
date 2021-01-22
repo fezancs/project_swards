@@ -1,0 +1,125 @@
+<div class="container-fluid" id="form">
+        
+    <div class="row d-flex justify-content-between namebar">
+        <h2>Manage Crosssells</h2>
+        <button class="orgbtn" routerLink="/catalogproduct/create"> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Add New Product</button>
+    </div>
+    
+    <div class="row d-flex justify-content-between namebar" style="border-bottom: none;">
+        <div class="d-flex justify-content-start">
+            <div class="d-flex align-items-center pagination">
+                <span> Page</span>
+                <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 1vw;"></i>
+                <input style="width: 3vw;height: 1.5vw;margin: 0vw .3vw;">
+                <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 1vw ;"></i>
+                <span>of 1 pages</span>
+            </div>
+            <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                <span> Views </span>
+                <input style="width: 3vw;height: 1.5vw;">
+                <span>Per Page</span>
+            </div>
+            <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                <span> Total 0 Records Found </span>
+            </div>
+        </div>
+        <div>
+            <button class="orgbtn"> Reset Filter</button>
+            <button class="orgbtn"> Search </button>
+        </div>
+    </div>
+
+    <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header" style="margin-bottom: 0;">
+        <div class="d-flex justify-content-start">
+            <div class="d-flex align-items-center pagination">
+                <span> Select All</span>
+            </div>
+            <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                <span> Unselect All </span>
+            </div>
+            <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                <span> Selected visible </span>
+            </div>             
+        </div> 
+        
+    </div>
+
+    <div class="row d-flex justify-content-start">
+        <div class="col-12">
+         
+         
+         <table class="table table-bordered" id="relatedproducts">
+             <colgroup>
+               <col class="five" />
+               <col class="six" />
+               <col class="twentyfive" />
+               <col class="twentyfive" />
+               <col class="twentyfive" />
+               <col class="seven" />
+               <col class="seven" />
+             </colgroup>
+             <tr>
+                 <th></th>
+                 <th>ID</th>
+                 <th>Product Name</th>
+                 <th>Product SKU </th>
+                 <th>Related Uppsells SKU</th>
+                 <th>Action</th>
+                 <th>Action</th>
+             </tr>
+             <tr>
+                 <td class="bg"> 
+                     <select name="" id=""  class="form-control" class="custominput">
+                       <option value="1">Any</option>
+                       <option value="2">Yes</option>
+                       <option value="2">No</option>
+                     </select> 
+                 </td>
+                 <td class="bg"> <input id='tagname' class="custominput" disabled> </td>
+                 <td class="bg"> 
+                     <select name="" id=""  class="form-control" class="custominput" disabled>
+                       <option value="1">Simple Product</option>
+                       <option value="2">Grouped Product</option>
+                       <option value="3">Configurable Product</option>
+                       <option value="4">Virtual Product</option>
+                       <option value="5">Bundle Product</option>
+                       <option value="6">Downloadable Product</option>
+                     </select> 
+                 </td>
+                 <td class="bg"> 
+                    <select name="sku" id="sku" class="form-control" class="custominput">
+                      <option value="1">sku2</option>
+                      <option value="2">sku3</option>
+                      <option value="3">sku5</option>
+                    </select> 
+                </td>
+                
+                <td class="bg"> 
+                    <select name="related_sku" id="related_sku" class="form-control" class="custominput">
+                        <option value="1">sku2</option>
+                        <option value="2">sku3</option>
+                        <option value="3">sku5</option>
+                      </select> 
+                </td>
+                 <td class="bg" colspan="2"> <a class="action" (click)="addcrosssell()">Add</a> </td>
+             </tr>
+             
+             <ng-container *ngFor="let row of rows">
+                <tr>
+                   <td> <input id='' class="custominput" type="checkbox" style="margin-left: 0;" ></td>
+                   <td>{{row.id}}</td>
+                   <td>{{row.name}}</td>
+                   <td>{{row.sku}}</td>
+                   <td>{{row.crosssells_sku}}</td>
+                   <td colspan="2"> <a  class="action" href="javascript:void(0)" (click)="deletecrosssell(row.sku,row.crosssells_sku)">Remove</a></td>
+             </tr>
+            </ng-container>
+ 
+         </table>
+         
+        </div>
+     </div>
+
+
+ </div>
+ 

@@ -1,0 +1,344 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1vw;
+}
+body{
+  background-color: #E9E9E9;
+}
+.namebar{
+  padding: .25vw;
+  background-color:  white;
+  margin-bottom: .3vw;
+  border-bottom: .2vw solid rgb(214, 213, 213);
+}
+.orgbtn{
+  color: white;
+}
+.form-header{
+  background-color: grey;
+  margin-bottom: 2vw;
+  padding: .6vw;
+}
+.form-header h3{
+  font-size: 1vw;
+  font-weight: bold;
+  float: left;
+  color: white;
+  margin-bottom: 0;
+}
+.form-header button , .orgbtn ,#smartbutton{
+  font-size: .8vw;
+  float: right;
+  background-color: orange;
+  color: white;
+  border: none;
+  outline: none;
+  padding: .3vw;
+  margin-left: .2vw;
+}
+.form-header button i{
+  font-size:.9vw;
+}
+.form-header button:hover ,.orgbtn:hover ,#smartbutton:hover{
+  color: black;
+}
+#inventryForm p{
+  margin: 0vw 2vw;
+  padding: 0;
+  color: blue;
+  font-size: 1vw;
+}
+.topnav {
+  overflow: hidden;
+  background-color: rgb(133, 126, 126);
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: .8vw 1vw;
+  text-decoration: none;
+  font-size: 1.2vw;
+  }
+  .topnav a:hover {
+   background-color: #ddd;
+   color: black;
+   }
+   .topnav a.active {
+    background-color: orange;
+    color: white;
+    font-size: 1.2vw;
+   }
+   a{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    text-decoration: none;
+    font-size: 1vw;
+    padding: .5vw;
+   }
+   a:hover{
+    text-decoration: none;
+    background-color: #ddd;
+    color: white;
+   }
+   .accordian{
+    width: 100%;
+    margin-bottom: .1vw;
+    background:#F8F8F8;
+    }
+    .acc-head{
+    width: 100%;
+    background:white;
+    }
+    .acc-head p{
+    font-size: .9vw;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: .5vw;
+    }
+  [class*="col-"] {
+    padding-left: 1vw !important;
+    padding-right: 1vw !important;
+  }
+  #insertproduct{
+    background-color: #F8F8F8;
+    padding: 2vw;
+  }
+  #form{
+    background:#F8F8F8;
+  }
+  input[type=checkbox]{
+    width: 1vw;
+    margin: 0 .3vw 0vw 1vw;
+  }
+  .form-group label ,#smartlabel{
+    font-size: .75vw;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .form-group input , .form-group select {
+    border-radius: 1.2vw;
+    height: 2.5vw;
+    padding: .5vw ;
+    font-size: 1vw;
+    font-family: 'Lato';
+    color: rgba(128,128,128,255);
+  }
+  .form-group select , #Shoppingqty ,#Shoppingcartqty{
+    width: 65%;
+  }
+  #todate , #fromdate ,#activefrom ,#activeto ,#specialfromdate ,#specialtodate{
+    width: 40%;
+  }
+  .form-group input:focus , .form-group select:focus , .form-group textarea:focus {
+    box-shadow: none;
+    border: .1vw solid #FFBC00;
+  }
+  .form-group textarea {
+    height: 10vw;
+    border-radius: 1.2vw;
+    padding: .5vw ;
+    font-size: 1vw;
+    font-family: 'Lato';
+    color: rgba(128,128,128,255);
+  }
+  th{
+    font-size: 1vw;
+    padding: .5vw;
+    white-space: nowrap;
+    background-color: rgb(187, 185, 185);
+}
+td{
+    padding: 0;
+    text-align: center;
+    background-color: #f1eeee;
+    font-size: .8vw;
+}
+td{
+  padding: .3vw;
+ 
+}
+.table td{
+  padding: .3vw;
+}
+th{
+  padding: .5vw;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+.two{
+  width: 2%;
+}
+.four{
+  width: 4%;
+}
+.five{
+  width: 5%;
+}
+.six{
+  width: 6%;
+}
+.seven{
+  width: 7%;
+}
+.eight{
+  width: 9%;
+}
+.nine{
+  width: 8%;
+}
+.ten{
+  width: 10%;
+}
+.twelve{
+  width: 12%;
+}
+.thirteen{
+  width: 13%;
+}
+.fourteen{
+  width: 14%;
+}
+.fifteen{
+  width: 15%;
+}
+.eighteen{
+  width: 18%;
+}
+.twenty {
+  width: 20%;
+}
+.twentythree{
+  width: 23%;
+}
+.twentyfive{
+  width: 25%;
+}
+.thirty{
+  width: 30%;
+}
+.thirtyfive{
+  width: 35%;
+}
+.thirtyseven{
+  width: 31%;
+}
+.hundred{
+  width: 100%;
+}
+.forty{
+  width: 40%;
+}
+.fourtyseven{
+  width: 47%;
+}
+.seventy{
+  width: 70%;
+}
+.sixty{
+  width: 60%;
+}
+.eighty{
+  width: 80%;
+}
+.zeropadding{
+  padding:0vw 0vw;
+}
+h2{
+  color: #FFBC00;
+  font-size: 1vw;
+  margin-bottom: 0;
+  font-weight: bold;
+}  
+.custominput{
+  width: 100%;
+  height: 1.5vw;
+  overflow: hidden;
+}
+h4{
+  font-size: .8vw;
+}
+.red{
+  color: red;
+}
+.bg{
+  background-color: #e6e6fa;
+}
+.action {
+  font-size: .8vw;
+  color: brown;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+  background: #f2f2f2;
+}
+ul li{
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+ul li a{
+  display: block;
+  padding: .5vw .4vw;
+  color: #333;
+  font-size: 1.2vw;
+  text-decoration: none;
+}
+ul li a:hover{
+  color: #fff;
+  background: #939393;
+}
+ul li ul.dropdown{
+  min-width: 13vw; /* Set width of the dropdown */
+  background: #f2f2f2;
+  display: none;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  font-size: .8vw;
+  white-space: nowrap;
+}
+ul li:hover ul.dropdown{
+  display: block;	/* Display the dropdown */
+}
+ul li ul.dropdown li{
+  display: block;
+}
+
+/*drop down*/
+
+.red{
+  color: red;
+  margin-left: .3vw;
+  font-size: 1.2vw;
+}
+.error{
+color: red;
+font-size: .85vw;
+}
+.form-control.is-invalid{
+border-color: red;
+background-image: none;
+box-shadow: none;
+}
+.form-group{
+padding: 0vw .2vw .2vw .2vw;
+margin-bottom: .5vw;
+}
+
+
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+  <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/x.y.z/moment.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/x.y.z/handlebars.min.js"></script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+      <link rel="stylesheet" href="/css/home.css">  
+      <style>
+      
+       *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        a{
+          display: flex;
+          flex-direction: column;
+          color: black;
+          text-decoration: none;
+          font-size: 1vw;
+          padding: .5vw;
+        }
+        a:hover{
+          text-decoration: none;
+          background-color: #ddd;
+          color: white;
+        }
+        .accordian{
+          width: 100%;
+          margin-bottom: .1vw;
+          background:#F8F8F8;
+        }
+        .acc-head{
+          width: 100%;
+          background:white;
+        }
+        .acc-head p{
+          font-size: .9vw;
+          font-weight: bold;
+          margin-bottom: 0;
+          padding: .5vw;
+        }
+        .form-head{
+          background-color:
+        grey;width:80%;
+        color: white;
+        padding: .7vw;
+        font-size: 1vw;
+        }
+        .form-head h3{
+          margin: 0;
+          font-size: 1vw;
+        }
+        .form-head button{
+          margin: 0;
+          padding: 0;
+          font-size: .7vw;
+          padding-top: 0;
+          padding-bottom: 0;
+          height: 2vw;
+          padding-right: 1vw;
+          padding-left: 1vw;
+          background-color: orange;
+        }
+      
+      </style>
+  </head>
+  <body style="background-color: #E9E9E9;">
+      <h1>hhhh</h1>
+      <div class="container-fluid">
+        {{>header}}
+          <div class="row d-flex .flex-row">
+             <div class="col-3" style="padding-right: 0;">
+                {{>accordian}}              
+              </div>
+              <div class="col-9" style="background-color: red;">
+                 
+                 <div class="row">
+                    <div class="col-12  d-flex flex-column justify-content-center " style="padding-left: 0;padding-right: 0;">
+                        <div class="form-head d-flex justify-content-between align-items-center">
+                           <h3>PRODUCT</h3>
+                           <button > new product</button>
+                        </div>  
+                      <form action="" method="post" style="width: 80%;background-color: lavender;">
+                        <div class="form-group">
+                          name:<input type="text" name="product_name" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                          tagline:<input type="text" name="product_tagline" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                          price:<input type="text" name="product_price" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                          description:<input type="text" name="product_description" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                          sale:<input type="text" name="product_sale" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                          available-qty:<input type="text" name="product_availableqty" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                          sold-qty:<input type="text" name="product_soldqty" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                          <button class="btn btn-info">Save Product</button>
+                        </div>
+                      </form>
+
+                    </div>
+                 </div>
+
+              </div>
+          </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   
+  </body>
+</html>
+

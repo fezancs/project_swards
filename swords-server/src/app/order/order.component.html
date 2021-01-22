@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row d-flex">
+       <div class="col-2">
+           
+        <div class="container-fluid">
+           <div class="row">
+              <div class="col-12 d-flex flex-column ">
+                <div class="acc-head">
+                  <p>PRODUCT INFORMATION</p>
+                </div>
+                <a routerLink="infomation" class="accordian">
+                  Information
+                </a>
+                <a routerLink="invoice" class="accordian">
+                 Invoices
+                </a>
+                <a routerLink="creditmemos" class="accordian">
+                  Credit Memos
+                </a>
+                <a routerLink="shipments" class="accordian">
+                  Shipments
+                </a>
+                <a routerLink="commenthistory" class="accordian">
+                  Comment History
+                </a>
+                <a routerLink="transactions" class="accordian">
+                  Transactions
+                </a>
+              </div>
+            </div>
+        </div>
+  
+       </div>
+       <div class="col-10" >
+       
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-12">  
+                  <router-outlet></router-outlet>
+               </div>
+            </div>
+         </div>
+  
+  
+       </div>
+    </div>
+  </div>
+  
+  
+  

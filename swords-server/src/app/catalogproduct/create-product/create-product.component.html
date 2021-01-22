@@ -1,0 +1,554 @@
+<div class="container-fluid ">
+    <div class="row d-flex ">
+       <div class="col-2">
+        <ul class="tabs" id="maps">
+            <li class="tab-link current" data-tab="tab-1">General</li>
+            <li class="tab-link" data-tab="tab-2">Prices</li>
+            <li class="tab-link" data-tab="tab-3">Meta Information</li>
+            <li class="tab-link" data-tab="tab-4">Gift Options</li>
+            <li class="tab-link" data-tab="tab-5">images</li>
+        </ul>
+       </div>
+       <div class="col-10">
+                 
+        <div id="tab-1" class="tab-content current">
+            <div class="col-12">
+                <div class="container-fluid" id="form" >
+                   <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header">
+                       <h3>GENERAL</h3> 
+                       <button> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Create New Attribute</button>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-10">            
+                           <form [formGroup]="insertproductForm" >   
+                            <div class="row">
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="name">NAME</label>
+                                      <input class="col-9" formControlName="name" type="text" class="form-control"  id="name">
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around">
+                                      <label class="col-3" for="description">DESCRIPTION</label>
+                                      <textarea class="col-9" formControlName="description" type="text" class="form-control"  id="description"></textarea>
+                                    </div>
+                                    <div class="form-group col-12 d-flex ">
+                                      <label class="col-3" for="short_description">SHORT DESCRIPTION</label>
+                                      <textarea class="col-9" formControlName="short_description" type="text" class="form-control"  id="short_description"></textarea>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="sku">SKU</label>
+                                      <input class="col-9" formControlName="sku" type="text" class="form-control"  id="sku">
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="weight">WEIGHT</label>
+                                      <input class="col-9" formControlName="sku" type="text" class="form-control"  id="sku">
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="news_from_date">Set Product as New from Date</label>
+                                      <div class="col-9">
+                                       <input class="col-9" formControlName="news_from_date" type="date" class="form-control"  id="news_from_date">
+                                      </div>
+                                      </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="news_to_date">Set Product as New to Date</label>
+                                      <div class="col-9">
+                                        <input class="col-9" formControlName="news_to_date" type="date" class="form-control"  id="news_to_date">
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-between ">
+                                      <label class="col-3" for="status">Status</label>
+                                      <div class="col-9">
+                                        <select name="status" id="status" formControlName="status" class="form-control">
+                                          <option value="1">Enabled</option>
+                                          <option value="2">Didabled</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-between ">
+                                      <label class="col-3" for="visibility" >Visibility</label>
+                                      <div class="col-9">
+                                        <select name="visibility" id="status" class="col-7" formControlName="visibility" class="form-control">
+                                          <option value="1">Enabled</option>
+                                          <option value="2">Didabled</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="country_of_manufacture">Country of Manufacture</label>
+                                      <div class="col-9">
+                                        <select name="country_of_manufacture" id="status" formControlName="country_of_manufacture" class="form-control">
+                                          <option value="1">Enabled</option>
+                                          <option value="2">Didabled</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="featured">Is Featured</label>
+                                      <div class="col-9">
+                                        <select name="isfeatured" id="featured" formControlName="featured" class="form-control">
+                                          <option value="1">Yes</option>
+                                          <option value="2">No</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="product_page_type">Product Page Type</label>
+                                      <div class="col-9">
+                                        <select name="pagetype" id="product_page_type" formControlName="product_page_type" class="form-control">
+                                          <option value="1">Wide Grid</option>
+                                          <option value="2">Wide Grid</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around " >
+                                      <label class="col-3" for="pagesize">Product Page Size</label>
+                                      <div class="col-9">
+                                        <select name="pagesize" id="pagesize" formControlName="pagesize" class="form-control">
+                                          <option value="1">Default</option>
+                                          <option value="2">Custom</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around">
+                                      <label class="col-3" for="custom_block">Custom Block 1</label>
+                                      <textarea class="col-9" formControlName="custom_block" type="text" class="form-control"  id="custom_block"></textarea>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around">
+                                      <label class="col-3" for="custom_block_2">Custom Block 2</label>
+                                      <textarea class="col-9" formControlName="custom_block_2" type="text" class="form-control"  id="custom_block_2"></textarea>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="thumbnail_label">Thumbnail Label</label>
+                                      <input class="col-9" formControlName="thumbnail_label" type="text" class="form-control"  >
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <div class="col-3 d-flex justify-content-start">
+                                          <label  for="image">Thumbnail Image</label>
+                                      </div>
+                                      <div class="col-9 d-flex  flex-column justify-content-start">
+                                          <div class="col-8">
+                                              <div
+                                                  class="droparea"
+                                                  (dragover)="onDragOver($event)"
+                                                  (drop)="onDrop($event)"
+                                                  (dragleave)="onDragLeave($event)"
+                                                  [class.active]="isActive"
+                                              >
+                                                  <input type="file" id="thumbnail" name="userfiles" class="browse-file" (change)="onSelectedFile($event)" />
+                                                  <h4>Choose files or <br /> Drag and drop files here</h4>
+                                              </div>
+                                              <div class="mt-1" *ngIf="thumbnail.progress > 0 && thumbnail.progress != 100">
+                                                  <div class="progress" style="height: 2vw;margin-bottom:2vw;">
+                                                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" [style.width.%]="thumbnail.progress" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{thumbnail.progress}}%</div>
+                                                  </div>
+                                              </div>
+                                              <div class="card mt-1 file-list" *ngIf="thumbnail.files">
+                                                  <div class="card-header">File List</div>
+                                                  <ul class="list-group list-group-flush">
+                                                      <ng-container *ngFor="let item of thumbnail.files">
+                                                          <li class="list-group-item">{{item.filename}} - Status: <span>Upload complete</span></li>
+                                                      </ng-container>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                        <label class="col-3" for="url_key">Url Key</label>
+                                        <input class="col-9" formControlName="url_key" type="text" class="form-control"  id="url_key">
+                                      </div>
+                                      <div class="form-group col-12 d-flex justify-content-around ">
+                                        <label class="col-3" for="url_path">Url Path</label>
+                                        <input class="col-9" formControlName="url_path" type="text" class="form-control"  id="url_path">
+                                      </div>
+                               </div>
+                           </form>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <!--tab 1 end-->
+        <!--tab 2-->
+        <div id="tab-2" class="tab-content">
+            <div class="col-12">
+                 <div class="container-fluid" id="form">
+                    <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header">
+                       <h3>Prices</h3> 
+                       <button> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Create New Attribute</button>
+                    </div>  
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-10">
+                            <form [formGroup]="insertproductForm">
+                               <div class="row">
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="price">Price</label>
+                                      <div class="col-9 d-flex flex-column">
+                                         <input formControlName="price" type="text" class="form-control"  id="price">
+                                         <label style="color: gray;">[USD]</label>
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around">
+                                      <label class="col-3" for="grouppricetable">Group Price</label>
+                                      <div class="col-9 d-flex flex-column">
+                                         <table class="table table-bordered" id="groupprice">
+                                             <thead>
+                                                 <tr>
+                                                     <th>Customer Group</th>
+                                                     <th>Price</th>
+                                                     <th>Action</th>
+                                                 </tr>
+                                             </thead>
+                                             <tbody></tbody>
+                                         </table>
+                                         <div class="add-group">
+                                             <button id="addgroupprice" class="orgbtn">Add Group Price</button>
+                                         </div>
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="special_price">Special Price</label>
+                                      <div class="col-9 d-flex flex-column">
+                                         <input class="col-9" formControlName="special_price" type="text" class="form-control"  id="special_price">
+                                         <label style="color: gray;">[USD]</label> 
+                                     </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="special_from_date">Special Price From Date</label>
+                                      <div class="col-9">
+                                       <input class="col-9" formControlName="special_from_date" type="date" class="form-control"  id="special_from_date">
+                                      </div>
+                                      </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="special_to_date">Special Price To date</label>
+                                      <div class="col-9">
+                                        <input class="col-9" formControlName="special_to_date" type="date" class="form-control"  id="special_to_date">
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-between ">
+                                      <label class="col-3" for="actualprice" >Display Actual Price</label>
+                                      <div class="col-9">
+                                        <select name="actualprice" id="actualprice" class="col-7" formControlName="actualprice" class="form-control">
+                                          <option value="1">Use Config</option>
+                                          <option value="2">Use Config</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                     <label class="col-3" for="retailprice">Manufacturers's Suggested Retail Price</label>
+                                     <div class="col-9">
+                                      <input class="col-9" formControlName="retailprice" type="text" class="form-control"  id="retailprice">
+                                     </div>
+                                     </div>
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                      <label class="col-3" for="tax_class_id">Tax Class</label>
+                                      <div class="col-9">
+                                        <select name="taxclass" id="tax_class_id" formControlName="tax_class_id" class="form-control">
+                                          <option value="1">Yes</option>
+                                          <option value="2">No</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                               </div>
+                           </form>      
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!--tab 2 end-->
+        <!--tab 3-->
+        <div id="tab-3" class="tab-content">
+            <div class="col-12">
+                <div class="container-fluid" id="form">
+                    <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header">
+                      <h3>Meta Information</h3> 
+                    </div>  
+                    <div class="row d-flex justify-content-center">
+                         <div class="col-10">
+                            <form [formGroup]="insertproductForm">
+                                <div class="row">
+                                    <div class="form-group col-12 d-flex justify-content-around ">
+                                       <label class="col-3" for="meta_title">Meta Tittle</label>
+                                       <input class="col-9" formControlName="meta_title" type="text" class="form-control"  id="meta_title">
+                                     </div>
+                                     <div class="form-group col-12 d-flex justify-content-around">
+                                       <label class="col-3" for="meta_keyword">Meta Keywords</label>
+                                       <textarea class="col-9" formControlName="meta_keyword" type="text" class="form-control"  id="meta_keyword"></textarea>
+                                     </div>
+                                     <div class="form-group col-12 d-flex ">
+                                       <label class="col-3" for="meta_description">Meta Description</label>
+                                       <textarea class="col-9" formControlName="meta_description" type="text" class="form-control"  id="meta_description"></textarea>
+                                     </div>
+                                </div>
+                            </form>
+                         </div>
+                      </div>
+                   </div>    
+            </div>
+        </div>
+        <!--tab 3 end--> 
+        <!--tab 4-->
+        <div id="tab-4" class="tab-content">
+            <div class="col-12">
+                <div class="container-fluid" id="form">
+                    <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header">
+                      <h3>Gift Options</h3> 
+                    </div>  
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-10">
+                           <form [formGroup]="insertproductForm">
+                            <div class="row">
+                                <div class="form-group col-12 d-flex justify-content-around ">
+                                  <label class="col-3" for="gift_message_available">Allow Gift Message</label>
+                                  <div class="col-9 d-flex align-items-center">
+                                    <select name="gift_message_available" id="gift_message_available" formControlName="gift_message_available" class="form-control">
+                                       <option value="1">Yes</option>
+                                       <option value="2">No</option>
+                                    </select>
+                                    <input type="checkbox" id="giftcheckbox" name="giftcheckbox" value="gift">
+                                    <label for="giftcheckbox"> Use Config Settings</label>
+                                  </div>
+                                </div>
+                            </div>
+                           </form>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!--tab 4 end-->
+        <!--tab 5-->
+        <div id="tab-5" class="tab-content">
+          <div class="col-12">
+              <div class="container-fluid" id="form">
+                  <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header">
+                    <h3>Gift Options</h3> 
+                  </div>  
+                  <div class="row d-flex justify-content-center">
+                      <div class="col-10">
+                        <form [formGroup]="insertproductForm">  
+                        <table class="table table-bordered" id="relatedproducts">
+                          <colgroup>
+                            <col class="ten" />
+                            <col class="thirty" />
+                            <col class="twenty" />
+                            <col class="twenty" />
+                            <col class="ten" />
+                          </colgroup>
+                          <tr>
+                              <th>Image</th>
+                              <th>Browse</th>
+                              <th colspan="2"> Label</th>
+                              <th>sort order</th> 
+                          </tr>
+                          <!--1st-->
+                          <tr class="form-group" >                              
+                            <td>
+                                <tr class="bg"></tr>
+                            </td>
+                            <td class="bg">
+                              <div
+                                id="aa"
+                                class="droparea"
+                                (dragover)="onDragOver($event)"
+                                (drop)="onDrop($event)"
+                                (dragleave)="onDragLeave($event)"
+                                [class.active]="isActive"    
+                              >
+                              <input type="file" id="image1" name="userfiles" class="browse-file" (change)="onSelectedFile($event)" />
+                              <h4>Choose files or <br /> Drag and drop files here</h4>
+                              </div>
+                            </td>                          
+                            <td colspan="2">
+                              <div class="" *ngIf="upload1.progress > 0 && upload1.progress != 100">
+                                <div class="progress" style="height: 1.5vw;margin-bottom:2vw;">
+                                  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" [style.width.%]="upload1.progress" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{upload1.progress}}%</div>
+                                </div>
+                            </div>
+                            <div class="card  file-list" *ngIf="upload1.files">
+                                <div class="card-header">File List</div>
+                                <ul class="list-group list-group-flush">
+                                    <ng-container *ngFor="let item of upload1.files">
+                                        <li class="list-group-item">{{item.filename}} - Status: <span>Upload complete</span></li>
+                                    </ng-container>
+                                </ul>
+                            </div>   
+                            
+                            </td>
+                            <td>
+                              <tr class="d-flex justify-content-center"> 1 </tr>
+                            </td>
+                          </tr>   
+                          <!--1-->
+                           <!--2-->
+                           <tr class="form-group" >                              
+                            <td>
+                                <tr class="bg">  </tr>
+                            </td>
+                            <td class="bg">
+                              <div
+                                class="droparea"
+                                (dragover)="onDragOver($event)"
+                                (drop)="onDrop($event)"
+                                (dragleave)="onDragLeave($event)"
+                                [class.active]="isActive"    
+                              >
+                              <input type="file" id="image2" name="userfiles" class="browse-file" (change)="onSelectedFile($event)" />
+                              <h4>Choose files or <br /> Drag and drop files here</h4>
+                              </div>
+                            </td>                          
+                            <td colspan="2">
+                              
+                              <div class="" *ngIf="upload2.progress > 0 && upload2.progress != 100">
+                                <div class="progress" style="height: 1.5vw;margin-bottom:2vw;">
+                                  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" [style.width.%]="upload2.progress" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{upload2.progress}}%</div>
+                                </div>
+                            </div>
+                            <div class="card file-list" *ngIf="upload2.files">
+                                <div class="card-header">File List</div>
+                                <ul class="list-group list-group-flush">
+                                    <ng-container *ngFor="let item of upload2.files">
+                                        <li class="list-group-item">{{item.filename}} - Status: <span>Upload complete</span></li>
+                                    </ng-container>
+                                </ul>
+                            </div>
+                            <td>
+                              <tr class=" d-flex justify-content-center"> 2 </tr>
+                            </td>
+                          </tr>   
+                          <!--2-->
+                           <!--3-->
+                           <tr class="form-group" >                              
+                            <td>
+                                <tr class="bg"></tr>
+                            </td>
+                            <td class="bg">
+                              <div
+                                class="droparea"
+                                (dragover)="onDragOver($event)"
+                                (drop)="onDrop($event)"
+                                (dragleave)="onDragLeave($event)"
+                                [class.active]="isActive"    
+                              >
+                              <input type="file" id="image3" name="userfiles" class="browse-file" (change)="onSelectedFile($event)" />
+                              <h4>Choose files or <br /> Drag and drop files here</h4>
+                              </div>
+                            </td>                          
+                            <td colspan="2">
+                               
+                              <div class="" *ngIf="upload3.progress > 0 && upload3.progress != 100">
+                                <div class="progress" style="height: 1.5vw;margin-bottom:2vw;">
+                                  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" [style.width.%]="upload3.progress" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{upload3.progress}}%</div>
+                                </div>
+                            </div>
+                            <div class="card file-list" *ngIf="upload3.files">
+                                <div class="card-header">File List</div>
+                                <ul class="list-group list-group-flush">
+                                    <ng-container *ngFor="let item of upload3.files">
+                                        <li class="list-group-item">{{item.filename}} - Status: <span>Upload complete</span></li>
+                                    </ng-container>
+                                </ul>
+                            </div>
+
+                            </td>
+                            <td>
+                              <tr class=" d-flex justify-content-center"> 3</tr>
+                            </td>
+                          </tr>   
+                          <!--3-->
+                           <!--4-->
+                           <tr class="form-group" >                              
+                            <td>
+                                <tr class="bg"></tr>
+                            </td>
+                            <td class="bg">
+                              <div
+                                class="droparea"
+                                (dragover)="onDragOver($event)"
+                                (drop)="onDrop($event)"
+                                (dragleave)="onDragLeave($event)"
+                                [class.active]="isActive"    
+                              >
+                              <input type="file"  id="image4" name="userfiles" class="browse-file" (change)="onSelectedFile($event)" />
+                              <h4>Choose files or <br /> Drag and drop files here</h4>
+                              </div>
+                            </td>                          
+                            <td colspan="2">
+                              
+                              <div class="" *ngIf="upload4.progress > 0 && upload4.progress != 100">
+                                <div class="progress" style="height: 1.5vw;margin-bottom:2vw;">
+                                  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" [style.width.%]="upload4.progress" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{upload4.progress}}%</div>
+                                </div>
+                            </div>
+                            <div class="card file-list" *ngIf="upload4.files">
+                                <div class="card-header">File List</div>
+                                <ul class="list-group list-group-flush">
+                                    <ng-container *ngFor="let item of upload4.files">
+                                        <li class="list-group-item">{{item.filename}} - Status: <span>Upload complete</span></li>
+                                    </ng-container>
+                                </ul>
+                            </div>
+
+                            </td>
+                            <td>
+                              <tr class=" d-flex justify-content-center"> 4 </tr>
+                            </td>
+                          </tr>   
+                          <!--4-->
+                           <!--5-->
+                           <tr class="form-group" >                              
+                            <td>
+                                <tr class="bg"></tr>
+                            </td>
+                            <td class="bg">
+                              <div
+                                class="droparea"
+                                (dragover)="onDragOver($event)"
+                                (drop)="onDrop($event)"
+                                (dragleave)="onDragLeave($event)"
+                                [class.active]="isActive"    
+                              >
+                              <input type="file" id="image5" name="userfiles" class="browse-file" (change)="onSelectedFile($event)" />
+                              <h4>Choose files or <br /> Drag and drop files here</h4>
+                              </div>
+                            </td>                          
+                            <td colspan="2">
+                              
+                              <div class="" *ngIf="upload5.progress > 0 && upload5.progress != 100">
+                                <div class="progress" style="height: 1.5vw;margin-bottom:2vw;">
+                                  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" [style.width.%]="upload5.progress" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{upload5.progress}}%</div>
+                                </div>
+                            </div>
+                            <div class="card  file-list" *ngIf="upload5.files">
+                                <div class="card-header">File List</div>
+                                <ul class="list-group list-group-flush">
+                                    <ng-container *ngFor="let item of upload5.files">
+                                        <li class="list-group-item">{{item.filename}} - Status: <span>Upload complete</span></li>
+                                    </ng-container>
+                                </ul>
+                            </div>
+
+                            </td>
+                            <td>
+                              <tr class="d-flex justify-content-center"> 5 </tr>
+                            </td>
+                          </tr>   
+                          <!--5-->                                        
+                      </table>
+                      
+                      </form>
+                     </div>
+                 </div>
+              </div>
+          </div>
+      </div>
+      <!--tab 5 end--> 
+        <button [disabled]="insertproductForm.invalid" class="btn btn-primary" (click)="onSubmit()">add product</button>
+      <!--  {{insertproductForm.value | json}} -->  
+
+
+
+
+       </div>
+    </div>
+</div>

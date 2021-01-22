@@ -1,0 +1,98 @@
+<div class="container-fluid">
+    <div class="row justify-content-center alig-items-center">
+        <div class="col-9">
+  
+          <div class="container-fluid" id="form" >
+              <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header">
+                  <h3>CREATE SUBCATEGORY</h3> 
+                  <button (click)="onSubmit()"> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Create New Attribute</button>
+               </div>
+               <div class="row d-flex justify-content-center">
+                   <div class="col-10">            
+                      <form [formGroup]="categoryForm" >   
+                       <div class="row">
+                               <div class="form-group col-12 d-flex justify-content-around ">
+                                 <label class="col-3" for="name">NAME</label>
+                                 <input class="col-9" formControlName="name" type="text" class="form-control"  id="name">
+                                </div>
+
+                                <div class="form-group col-12 d-flex justify-content-around ">
+                                  <label class="col-3" for="parentid">CATEGORY ID</label>
+                                  <input class="col-9" formControlName="parentid" type="text" class="form-control"  id="name">
+                                </div>
+
+                               <div class="form-group col-12 d-flex justify-content-around">
+                                 <label class="col-3" for="description">DESCRIPTION</label>
+                                 <textarea class="col-9" formControlName="description" type="text" class="form-control"  id="description"></textarea>
+                               </div>
+                               
+                               <div class="form-group col-12 d-flex justify-content-between ">
+                                  <label class="col-3" for="isactive">Status</label>
+                                  <div class="col-9">
+                                    <select name="status" id="status" formControlName="isactive" class="form-control">
+                                      <option value="1">active</option>
+                                      <option value="2">disable</option>
+                                    </select>
+                                  </div>
+                              </div>
+  
+                              <div class="form-group col-12 d-flex justify-content-around ">
+                                 <label class="col-3" for="createdat">Set Product as New from Date</label>
+                                 <div class="col-9">
+                                    <input class="col-9" formControlName="createdat" type="date" class="form-control" >
+                                 </div>
+                              </div> 
+  
+  
+                              <div class="form-group col-12 d-flex">
+                                <div class="col-3 d-flex justify-content-start">
+                                    <label  for="image">Category Image</label>
+                                </div>
+                                <div class="col-10 d-flex  flex-column justify-content-start">
+                                    <div class="col-8">
+                                        <div
+                                            class="droparea"
+                                            (dragover)="onDragOver($event)"
+                                            (drop)="onDrop($event)"
+                                            (dragleave)="onDragLeave($event)"
+                                            [class.active]="isActive"
+                                        >
+                                            <input type="file" name="userfiles" class="browse-file" (change)="onSelectedFile($event)" />
+                                            <h4>Choose files or <br /> Drag and drop files here</h4>
+                                        </div>
+                                        <div class="mt-2" *ngIf="upload.progress > 0 && upload.progress != 100">
+                                            <div class="progress" style="height: 1.5vw;margin-bottom:2vw;">
+                                              <div class="progress-bar progress-bar-striped bg-info" role="progressbar" [style.width.%]="upload.progress" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{upload.progress}}%</div>
+                                            </div>
+                                        </div>
+                                        <div class="card mt-3 file-list" *ngIf="upload.files">
+                                            <div class="card-header">File List</div>
+                                            <ul class="list-group list-group-flush">
+                                                <ng-container *ngFor="let item of upload.files">
+                                                    <li class="list-group-item">{{item.filename}} - Status: <span>Upload complete</span></li>
+                                                </ng-container>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                               
+                              <div class="form-group col-12 d-flex justify-content-around ">
+                                <label class="col-3" for="metakeywords">META KEYWORDS</label>
+                                <input class="col-9" formControlName="metakeywords" type="text" class="form-control" >
+                              </div>
+                              <div class="form-group col-12 d-flex justify-content-around">
+                                <label class="col-3" for="metadescription">META DESCRIPTION</label>
+                                <textarea class="col-9" formControlName="metadescription" type="text" class="form-control"  id="description"></textarea>
+                              </div>
+                              
+  
+                                                        
+                          </div>
+                      </form>
+                   </div>
+               </div>
+       
+        </div>
+    </div>
+  </div>

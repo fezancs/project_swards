@@ -1,0 +1,77 @@
+<div class="container-fluid" id="form">
+    <app-orderheader></app-orderheader>
+    <div class=" row d-flex justify-content-between alig-items-center justify-content-center form-header">
+        <div class="d-flex justify-content-start">
+                <div class="d-flex align-items-center pagination">
+                    <span> Page</span>
+                    <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 1vw;"></i>
+                    <input style="width: 3vw;height: 1.5vw;margin: 0vw .3vw;">
+                    <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 1vw ;"></i>
+                    <span>of 1 pages</span>
+                </div>
+                  <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                    <span> Views </span>
+                    <input style="width: 3vw;height: 1.5vw;">
+                    <span>Per Page</span>
+                  </div>
+                  <div class="d-flex align-items-center pagination" style="border-left: .1vw solid black;">
+                    <span> Total 0 Records Found </span>
+                  </div>
+               
+        </div> 
+        <button> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Create New Attribute</button>
+    </div>
+    <div class="row d-flex justify-content-start">
+       <div class="col-12">
+        
+        
+        <table class="table table-bordered" id="relatedproducts">
+            <colgroup>
+              <col class="thirty" />
+              <col class="thirty" />
+              <col class="twenty" />
+              <col class="twenty" />
+            </colgroup>
+            <tr>
+                <th>Shippments#</th>
+                <th>Shippment to Name</th>
+                <th>Dated Shiped</th>
+                <th>Total Qty</th>
+            </tr>
+            <tr>
+                <td class="bg"> <input id='shippmentnum' class="custominput " type="text"> </td>
+                <td class="bg"> <input id='shippmentname' class="custominput"> </td>
+                <td class="bg">
+                    <div class="d-flex flex-column">
+                        <div class=" d-flex">
+                            <label for="datedshippedfrom" style="font-size: .8vw;padding: 0;">From:</label>
+                            <input id="dateshippedfrom" class="custominput" type="date">
+                        </div>
+                        <div class=" d-flex justify-content-between">
+                            <label for="dateshippedto" style="font-size: .8vw;padding: 0;">To:</label>
+                            <input id="dateshippedto" class="custominput" style="margin-left: 1vw;" type="date">
+                        </div>
+                    </div>                      
+                </td>
+                <td class="bg">
+                    <div class="d-flex flex-column">
+                        <div class=" d-flex">
+                            <label for="totalqtyfrom" style="font-size: .8vw;padding: 0;">From:</label>
+                            <input id="totalqtyfrom" class="custominput" type="date">
+                        </div>
+                        <div class=" d-flex justify-content-between">
+                            <label for="totalqtyto" style="font-size: .8vw;padding: 0;">To:</label>
+                            <input id="totalqtyto" class="custominput" style="margin-left: 1vw;" type="date">
+                        </div>
+                    </div>                      
+                </td> 
+            </tr>
+            <tr>
+                <td colspan = "5">No Record Found</td>
+            </tr>
+                    
+        </table>
+        
+       </div>
+    </div>
+ </div>
