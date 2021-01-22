@@ -16,7 +16,7 @@ RUN npm install
 COPY . /app
 
 # start app
-CMD npm start --host 0.0.0.0
+CMD npm start
 
 
 
