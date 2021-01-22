@@ -16,7 +16,7 @@ RUN npm install
 COPY . /app
 
 # start app
-CMD npm start
+#CMD npm start
 
 
 
